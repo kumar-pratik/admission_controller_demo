@@ -1,0 +1,7 @@
+kubectl create ns opa
+
+kubectl apply -f opa.yaml
+
+kubectl apply -f webhook_config.yaml
+
+kubectl create configmap ingress-whitelist --from-file=ingress-whitelist.rego
